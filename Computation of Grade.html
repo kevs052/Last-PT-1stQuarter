@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computation Of Grade</title>
+    <link rel="stylesheet" href="ComputationGrade.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%; 
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Grade Calculator</h1>
+
+  <table>
+    <tr>
+       <td colspan="4"td style="color:red" td style><center>Computation Of Grades</center></td>
+    </tr>
+    <tr>
+      <td colspan="4"td style="color:red" td style>Written Tasks</center></td>
+    </tr>
+    <tr>
+      <td>Quiz 1</td>
+      <!--Input Type box Quiz 1-->
+      <td><input type="number" id="qRange1"></td> 
+      <td><input type="number" id="qRange1"></td>
+    </tr>
+    <tr>
+      <td>Quiz 2</td>
+      <!--Input Type box Quiz 2-->
+      <td><input type="number" id="qRange2"></td>
+      <td><input type="number" id="qRange2"></td>
+    </tr>
+    <tr>
+      <td>Quiz 3</td>
+      <!--Input Type box Quiz 3-->
+      <td><input type="number" id="qRange3"></td>
+       <td><input type="number" id="qRange3"></td>
+    </tr>
+         <!--To Compute Quizzes-->
+         <td>Compute Quiezzes:</td>
+    <td><input type="text" id="totalQuizzes" readonly></td> 
+    <td><input type="text" id="totalQuizzesWeighted" readonly><input type="checkbox">20%</td> 
+</table> 
+   <button onclick="computeQuizzes()">Calculate Quizzes</button><!--Button in quiz-->
+<table>
+        <td colspan="4"td style="color:red" td style>Performance Task</center></td>
+      </tr>
+    <tr>
+      <!--Input Type Pt1-->
+      <td>Performance Task 1</td>
+      <td><input type="number" id="ptRange1"></td>
+      <td><input type="number" id="ptRange1"></td>
+    </tr>
+    <tr>
+      <!--Input Type Pt2-->
+      <td>Performance Task 2</td>
+      <td><input type="number" id="ptRange2"></td>
+      <td><input type="number" id="ptRange2"></td>
+    </tr>
+    <tr>
+      <!--Input Type Pt3-->
+      <td>Performance Task 3</td>
+      <td><input type="number" id="ptRange3"></td>
+      <td><input type="number" id="ptRange3"></td>
+    </tr>
+<tr>
+    <!--To Compute PT-->
+     <td>Compute Performance Tasks:</td>
+    <td><input type="text" id="totalPTasks" readonly></td>
+    <td><input type="text" id="totalPTasksWeighted" readonly><input type="checkbox">60%</td>
+  </tr>
+    </table>
+<button onclick="computePTasks()">Calculate Performance Tasks</button><!--Button PT-->
+  <table>
+          <td>PERIODICAL EXAM</td>
+                <!--Input Type Periodical Exam-->
+               <td><input type="number" id="chkExam"></td>
+               <td><input type="number" id="chkExam"></td>  
+              </tr>
+<tr>
+       <td rowspan="2"><button onclick="getExam()">Periodical Exam</button></td><!--Button Of Periodical Exam-->
+    <tr>
+              <!--Result-->
+              <td><input type="text" id="chkExamResult" readonly></td> 
+              <td><input type="text" id="txtPercentage" readonly><input type="checkbox">20%</td>  
+    <tr>
+    </table>
+      <table>
+      <td>Grade</td>
+      <td><input type="text" id="txtGrade" readonly></td><!--Type box in Final Grade-->
+    </tr>
+  </table>
+  <button onclick="computeGrade()">Calculate Grades<input type="checkbox"></button><!--Button of Final Grade-->
+
+ <script src="Computation.js"></script><!--Connect To JavaScript-->
